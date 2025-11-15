@@ -22,7 +22,7 @@ This app allows users to **add**, **edit**, and **delete** items with smooth int
 ## 🔗 **Live Demo**
 
 
-🌍 Live App: 
+🌍 Live App: https://dileep-kumawat.github.io/Create-Manage-Dynamic-Lists-using-html-css-and-js/
 
 ---
 
@@ -80,7 +80,7 @@ Remove any item instantly with a smooth UI response.
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone 
+git clone https://github.com/Dileep-kumawat/Create-Manage-Dynamic-Lists-using-html-css-and-js.git
 ```
 
 ### 2️⃣ Navigate Into Folder
