@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #121212, #1f1f1f, #0f0f0f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+    color: #eee;
+}
+
+main {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 30px 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.7s ease-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ffffffcc;
+    animation: slideDown 0.7s ease;
+}
+
+section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+
+#addInp {
+    flex: 1;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    outline: none;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.35), inset -2px -2px 6px rgba(255, 255, 255, 0.1);
+    transition: 0.25s ease;
+}
+
+#addInp::placeholder {
+    color: #cccccc88;
+}
+
+#addInp:focus {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.4), inset -2px -2px 8px rgba(255, 255, 255, 0.12);
+}
+
+#addBtn {
+    padding: 14px 20px;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(145deg, #006eff, #0044aa);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 110, 255, 0.4);
+}
+
+#addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 110, 255, 0.5);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid #007aff;
+    transition: 0.3s ease;
+    animation: popIn 0.35s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+li button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.25s ease;
+}
+
+li span {
+    flex: 0.9;
+}
+
+#editBtn {
+    background: #ffcd38cc;
+    color: black;
+    box-shadow: 0 3px 10px rgba(255, 205, 56, 0.4);
+}
+
+#editBtn:hover {
+    background: #ffd95ecc;
+    transform: translateY(-2px);
+}
+
+
+#editBtn[disabled] {
+    background-color: #ffcd381d;
+    color: white;
+    box-shadow: 0 3px 10px rgba(255, 205, 56, 0.09);
+}
+
+#editBtn[disabled]:hover {
+    transform: none;
+}
+
+#deleteBtn {
+    background: #ff4f4fcc;
+    color: white;
+    box-shadow: 0 3px 10px rgba(255, 79, 79, 0.4);
+}
+
+#deleteBtn:hover {
+    background: #ff6767cc;
+    transform: translateY(-2px);
+}
+
+li input {
+    flex: 0.9;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    section {
+        flex-direction: column;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    #editBtn[disabled]+#deleteBtn {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
